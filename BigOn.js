@@ -3,12 +3,11 @@ const everyone =['rash','ram','roy','ash','bruce','gill','dory'];
 const large = new Array(10).fill('nemo');
 
 function findNemo(array){
-let t0 =performance.now();
+
 	for (let i =0;i<array.length;i++){
 		if(array[i]=='nemo'){
 			console.log('found nemo');
 		}
 	}
-let t1 = performance.now();
-console.log('call tp find nemo took' +(t1-t0+ 'milisecond'));
 }
+findNemo(large); //o(n)  -> linear time
