@@ -1,24 +1,14 @@
+const nemo =['nemo'];
+const everyone =['rash','ram','roy','ash','bruce','gill','dory'];
+const large = new Array(10).fill('nemo');
 
-function ReverseString(str) {
-
-	// Check input
-	if(!str || str.length < 2 ||
-			typeof str!== 'string') {
-		return 'Not valid';
+function findNemo(array){
+let t0 =performance.now();
+	for (let i =0;i<array.length;i++){
+		if(array[i]=='nemo'){
+			console.log('found nemo');
+		}
 	}
-	
-	// Take empty array revArray
-	const revArray = [];
-	const length = str.length - 1;
-	
-	// Looping from the end
-	for(let i = length; i >= 0; i--) {
-		revArray.push(str[i]);
-	}
-
-	// Joining the array elements
-	return revArray.join('');
-	
+let t1 = performance.now();
+console.log('call tp find nemo took' +(t1-t0+ 'milisecond'));
 }
-
-ReverseString('abba');
